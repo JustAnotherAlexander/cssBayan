@@ -1,0 +1,130 @@
+body {
+    background-image: url("assets/images/geometryBackground.jpg");
+    background-size: cover;
+}
+
+.Main_Wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 30%;
+    margin: 1rem auto;
+    font-size: x-large;
+}
+
+.Main_Wrapper_mem_container {
+    backdrop-filter: blur(25px);
+    background-color: rgba(255, 255, 255, 0.205);
+    border-radius: 1rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 0.1rem solid #000;
+}
+
+.Main_Wrapper_mem_container_image {
+    transform: scale(0);
+    width:0px;
+    height: 0px;
+    transition: 0.5s;
+}
+
+.Main_Wrapper_mem_container_mem_container_text {
+    width:100%;
+    padding-left: 1rem;
+    font-size: large;
+    color: blue;
+}
+
+.Main_Wrapper_mem_container_input {
+    appearance: none;
+}
+
+.Main_Wrapper_mem_container_input:checked + .Main_Wrapper_mem_container_mem_container_label > .Main_Wrapper_mem_container_image{
+    display: flex;
+    transform: scale(1);
+    transition: 0.5s;
+    height: 80%;
+    width: 65%;
+    margin: auto;
+}
+
+.Main_Wrapper_mem_container:hover > .Main_Wrapper_mem_container_open_close_buttons > .Main_Wrapper_mem_container_mem_container_label > .Main_Wrapper_mem_container_image{
+    display: flex;
+    transform: scale(1);
+    transition: 0.5s;
+    height: 60%;
+    width: 65%;
+    margin: auto;
+}
+
+.Main_Wrapper_mem_container:hover {
+    background-color: rgba(255, 255, 255, 0.505);   
+}
+
+.Main_Wrapper_mem_container:hover > .Main_Wrapper_mem_container_open_close_buttons > .Main_Wrapper_mem_container_mem_container_label > .Main_Wrapper_mem_container_mem_container_label_buttons > .Main_Wrapper_mem_container_mem_container_text{
+    color: #000;
+    font-weight: bold;
+}
+
+.Main_Wrapper_mem_container_mem_container_label {
+    cursor: pointer;
+}
+
+.Main_Wrapper_mem_container:active > .Main_Wrapper_mem_container_open_close_buttons > .Main_Wrapper_mem_container_mem_container_label > .Main_Wrapper_mem_container_mem_container_label_buttons + .Main_Wrapper_mem_container_mem_container_text {
+    color: blue;
+}
+
+.Main_Wrapper_mem_container_mem_container_label_buttons {
+    display: flex;
+}
+
+.Main_Wrapper_mem_container_input:checked + .Main_Wrapper_mem_container_mem_container_label > .Main_Wrapper_mem_container_mem_container_label_buttons > .arrow {
+        display: none;
+}
+
+.Main_Wrapper_mem_container_input:not(:checked) + .Main_Wrapper_mem_container_mem_container_label > .Main_Wrapper_mem_container_mem_container_label_buttons > .close {
+    display: none;
+}
+
+.Main_Wrapper_mem_container:hover > .Main_Wrapper_mem_container_open_close_buttons > .Main_Wrapper_mem_container_mem_container_label > .Main_Wrapper_mem_container_mem_container_label_buttons > .arrow{
+    display: none;
+}
+.Main_Wrapper_mem_container:hover > .Main_Wrapper_mem_container_open_close_buttons > .Main_Wrapper_mem_container_mem_container_label > .Main_Wrapper_mem_container_mem_container_label_buttons > .close{
+    display: block;
+}
+
+.arrow {
+    height: 1rem;
+    width: 1rem;
+}
+
+.close {
+    height: 1rem;
+    width: 1rem;
+}
+
+.icon {
+    height: inherit;
+    width: inherit;
+}
+
+@media (max-width:830px) {
+    .Main_Wrapper {
+        font-size: medium;
+        max-width: 50%;
+    }
+    .Main_Wrapper_mem_container_mem_container_text {
+        font-size: medium;
+    }
+ }
+
+ @media (max-width:500px) {
+    .Main_Wrapper {
+        font-size: small;
+        max-width: 80%;
+    }
+    .Main_Wrapper_mem_container_mem_container_text {
+        font-size: small;
+    }
+ } 
