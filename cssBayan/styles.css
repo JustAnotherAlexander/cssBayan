@@ -94,6 +94,21 @@ body {
     display: block;
 }
 
+.arrow {
+    height: 1rem;
+    width: 1rem;
+}
+
+.close {
+    height: 1rem;
+    width: 1rem;
+}
+
+.icon {
+    height: inherit;
+    width: inherit;
+}
+
 @media (max-width:830px) {
     .Main_Wrapper {
         font-size: medium;
