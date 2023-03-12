@@ -1,9 +1,25 @@
+body {
+    background-image: url("/cssBayan/assets/images/geometryBackground.jpg");
+    background-size: cover;
+}
+
 .Main_Wrapper {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    max-width: 20%;
+    max-width: 30%;
     margin: 20px auto;
+    font-size: x-large;
+}
+
+.Main_Wrapper_mem_container {
+    backdrop-filter: blur(25px);
+    background-color: rgba(255, 255, 255, 0.205);
+    border-radius: 1rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 0.1rem solid #000;
 }
 
 .Main_Wrapper_mem_container_image {
@@ -13,26 +29,43 @@
     transition: 0.5s;
 }
 
+.Main_Wrapper_mem_container_mem_container_text {
+    width:100%;
+    padding-left: 1rem;
+    font-size: large;
+    color: blue;
+}
+
 .Main_Wrapper_mem_container_input {
     appearance: none;
 }
 
-.Main_Wrapper_mem_container_input:checked + .Main_Wrapper_mem_container_image{
+.Main_Wrapper_mem_container_input:checked + .Main_Wrapper_mem_container_mem_container_label > .Main_Wrapper_mem_container_image{
     display: flex;
     transform: scale(1);
     transition: 0.5s;
-    height: 100%;
-    width: 100%;
+    height: 80%;
+    width: 65%;
+    margin: auto;
 }
 
-.Main_Wrapper_mem_container:hover > .Main_Wrapper_mem_container_open_close_buttons > .Main_Wrapper_mem_container_image{
+.Main_Wrapper_mem_container:hover > .Main_Wrapper_mem_container_open_close_buttons > .Main_Wrapper_mem_container_mem_container_label > .Main_Wrapper_mem_container_image{
     display: flex;
     transform: scale(1);
     transition: 0.5s;
-    height: 100%;
-    width: 100%;
+    height: 60%;
+    width: 65%;
+    margin: auto;
 }
 
-.Main_Wrapper_mem_container_mem_container_text {
+.Main_Wrapper_mem_container:hover > .Main_Wrapper_mem_container_open_close_buttons > .Main_Wrapper_mem_container_mem_container_label > .Main_Wrapper_mem_container_mem_container_text{
+    color: #000;
+}
+
+.Main_Wrapper_mem_container_mem_container_label {
     cursor: pointer;
+}
+
+.Main_Wrapper_mem_container:active > .Main_Wrapper_mem_container_open_close_buttons > .Main_Wrapper_mem_container_mem_container_label + .Main_Wrapper_mem_container_mem_container_text {
+    color: blue;
 }
