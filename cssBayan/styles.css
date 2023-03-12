@@ -8,7 +8,7 @@ body {
     justify-content: center;
     flex-direction: column;
     max-width: 30%;
-    margin: 20px auto;
+    margin: 1rem auto;
     font-size: x-large;
 }
 
@@ -93,3 +93,23 @@ body {
 .Main_Wrapper_mem_container:hover > .Main_Wrapper_mem_container_open_close_buttons > .Main_Wrapper_mem_container_mem_container_label > .Main_Wrapper_mem_container_mem_container_label_buttons > .close{
     display: block;
 }
+
+@media (max-width:830px) {
+    .Main_Wrapper {
+        font-size: medium;
+        max-width: 50%;
+    }
+    .Main_Wrapper_mem_container_mem_container_text {
+        font-size: medium;
+    }
+ }
+
+ @media (max-width:500px) {
+    .Main_Wrapper {
+        font-size: small;
+        max-width: 80%;
+    }
+    .Main_Wrapper_mem_container_mem_container_text {
+        font-size: small;
+    }
+ } 
