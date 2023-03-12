@@ -1,0 +1,38 @@
+.Main_Wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 20%;
+    margin: 20px auto;
+}
+
+.Main_Wrapper_mem_container_image {
+    transform: scale(0);
+    width:0px;
+    height: 0px;
+    transition: 0.5s;
+}
+
+.Main_Wrapper_mem_container_input {
+    appearance: none;
+}
+
+.Main_Wrapper_mem_container_input:checked + .Main_Wrapper_mem_container_image{
+    display: flex;
+    transform: scale(1);
+    transition: 0.5s;
+    height: 100%;
+    width: 100%;
+}
+
+.Main_Wrapper_mem_container:hover > .Main_Wrapper_mem_container_open_close_buttons > .Main_Wrapper_mem_container_image{
+    display: flex;
+    transform: scale(1);
+    transition: 0.5s;
+    height: 100%;
+    width: 100%;
+}
+
+.Main_Wrapper_mem_container_mem_container_text {
+    cursor: pointer;
+}
